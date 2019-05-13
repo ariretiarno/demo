@@ -1,8 +1,7 @@
-FROM centos:latest
+FROM ubuntu:16.04
 
-RUN yum -y update && yum -y install httpd zip unzip
+RUN apt update && apt install nginx -y
 
-ADD . /var/www/html
+COPY . /var/www/html/
 
-
-CMD /usr/sbin/apache2 -DFOREGROUND
+CMD /usr/sbin/nginx -g 'daemon off;'
