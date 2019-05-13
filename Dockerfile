@@ -5,4 +5,4 @@ RUN yum -y update && yum -y install httpd zip unzip
 ADD . /var/www/html
 
 
-ENTRYPOINT systemctl start httpd
+CMD /usr/sbin/apache2 -DFOREGROUND
