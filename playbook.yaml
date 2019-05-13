@@ -1,0 +1,15 @@
+- hosts: apps
+  tasks:
+    - name: install python
+      apt:
+        name: python-docker
+        state: present
+    - name: run docker container
+      docker_container:
+        image: ariretiarno/demo
+        detach: yes
+        interactive: yes
+        tty: yes
+        name: apps
+        state: present
+        exposed_ports: 80
