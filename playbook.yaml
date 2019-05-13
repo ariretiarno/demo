@@ -12,4 +12,5 @@
         tty: yes
         name: apps
         state: started
-        exposed_ports: 80
+        expose:
+          - 80
