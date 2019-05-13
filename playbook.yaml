@@ -13,4 +13,4 @@
         name: apps
         state: started
         expose:
-          - 80:80
+          - "80:80"
