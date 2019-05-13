@@ -11,5 +11,5 @@
         interactive: yes
         tty: yes
         name: apps
-        state: present
+        state: running
         exposed_ports: 80
