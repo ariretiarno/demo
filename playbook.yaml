@@ -7,10 +7,5 @@
     - name: run docker container
       docker_container:
         image: ariretiarno/demo
-        detach: yes
-        interactive: yes
-        tty: yes
         name: apps
-        state: present
-        ports:
-          - "80:80"
+        state: absent
