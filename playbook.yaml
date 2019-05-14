@@ -11,6 +11,6 @@
         interactive: yes
         tty: yes
         name: apps
-        state: started
+        state: present
         ports:
           - "80:80"
