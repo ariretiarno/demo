@@ -8,10 +8,10 @@
       docker_container:
         name: apps
         state: absent
-    - name: pull image terbaru
+    - name: rm image
       docker_image:
         name: ariretiarno/demo
-        state: present
+        state: absent
     - name: run container
       docker_container:
         name: apps
