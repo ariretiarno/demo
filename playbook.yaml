@@ -4,8 +4,22 @@
       apt:
         name: python-docker
         state: present
-    - name: run docker container
+    - name: stop docker container
       docker_container:
-        image: ariretiarno/demo
         name: apps
         state: absent
+    - name: pull image terbaru
+      docker_image:
+        name: ariretiarno/demo
+        state: present
+    - name: run container
+      docker_container:
+        name: apps
+        image: ariretiarno/demo
+        detach: yes
+        interactive: yes
+        tty: yes
+        name: apps
+        state: started
+        ports:
+          - "80:80"
