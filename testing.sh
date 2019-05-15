@@ -2,5 +2,5 @@ if [ -e index.html ]
 then
     echo "ok"
 else
-    [-e gagal.txt]
+    [ -e gagal.txt ]
 fi
