@@ -1,6 +1,6 @@
 if [ -e index.html ]
 then
     echo "ok"
-#else
-    #echo "nok"
+else
+    [-e gagal.txt]
 fi
